@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title >Connexion</title>
+        <link rel="stylesheet" href="../../design.css">
+
+
+    </head>
+    <body class = "access">
+
+        <div class="video-container">
+    <video autoplay muted loop id="background-video">
+        <source src="../../assets/images/Vidéo sans titre ‐ Réalisée avec Clipchamp.mp4" type="video/mp4">
+        
+    </video>
+</div>
+
+
+    <div class = "authentification">
+        <form (ngSubmit) = "onSubmit()"method="post">
+            <label for = "gmail_participant" >Email</label>
+            <input type="email" id="gmail_participant" name="mail" [(ngModel)]="mail" placeholder="abc@gmail.com" required>
+
+
+            <label for ="pwd_participant"> Password</label>
+            <input type ="password" id="pwd_participant" name="password"[(ngModel)]="password">
+            <button type ="submit">Valider</button>
+            <button type="reset" >Reset</button>
+        </form>
+    </div>
+    
+
+
+
+    </body>
+</html>
