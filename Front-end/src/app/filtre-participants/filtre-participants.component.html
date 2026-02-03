@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quels participants ?</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <h2>Quels participants ?</h2>
+    <form [formGroup]="myform" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label for="Theme">Thème du cycle de formation</label>
+            <select class="form-control" id="Theme" formControlName="Theme">
+                <option value="cybersecurity">cybersecurity</option>
+                <option value="datascience">datascience</option>
+                <option value="développement web">développement web</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="numSalle">Numéro de salle</label>
+            <input type="number" class="form-control" id="numSalle" formControlName="numSalle">
+        </div>
+        <div class="form-group">
+            <label for="date_de_depart">Date de début</label>
+            <input type="date" class="form-control" id="date_de_depart" formControlName="date">
+        </div>
+        <button type="submit" class="btn btn-primary">Valider</button>
+        <button type="button" (click)="onReset()" class="btn btn-secondary">Annuler</button>
+    </form>
+</body>
+</html>
