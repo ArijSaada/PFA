@@ -1,0 +1,238 @@
+<!--DOCTYPE html>
+<html>
+    <head>
+        <title>Cycle de formation : </title>
+        <meta name="viewport" content="widht : device-width, intial-scale = 1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../design.css">
+
+    </head>
+    <body>
+        
+            <table class = "centred_table">
+                <tr>
+                    <td>
+                        <img src ="../../assets/images/cycle.png" style ="width : 80px ; height: 80 px;"/>
+                    </td>
+                    <th>
+                        Feuille de Présence
+                    </th>
+                    <td>
+                        <ul>
+                            <li>
+                        Réf : FORM.FINC.03
+                     </li>
+                        <li>
+                        Version : 02
+                        </li>
+                        <li>
+                        Date d'application: 13/06/2018
+                    </li>
+                    </ul>
+                    </td>
+                </tr>
+            </table>
+            <table>
+            
+            <tr> <td> Entreprise : Centre National de l'informatique </td></tr>
+            <tr>
+
+            
+            <table>
+                <tr>
+                    <td> <p>Numéro d'action :   </td>
+                        <td id ="num_action">  .........</td>
+                </tr>
+                        <tr>
+                    <td>
+                        theme de Formation :
+                    </td>
+                    <td id ="theme">
+                        ..................
+                    </td>
+                    <td> Loi des finances : </td>
+                    <td id = "Loi">
+                        ...............
+                    </td>
+                    <td> Mode de formation : </td>
+                    <td id ="mode">
+                       ..................
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Lieu de déroulement: 
+                       
+                    </td>
+                    <td id = "lieu">
+                       .................
+                    </td>
+                    <td>
+                        Gouvernorat :
+                    </td>
+                    <td id = "Gouvernorat">
+                        ..................
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Période  : du
+                    </td>
+                    <td id ="debut"> .....................</td>
+                    <td> Au </td>
+                    <td id ="fin">.........................</td>
+                    <td> Horaire</td>
+                    <td id ="heure_debut">....................</td>
+                    <td> à</td>
+                    <td id ="heure_fin"> ...................</td>
+                    <td>Pause : de</td>
+                    
+                    <td id ="debut_heure_Pause"> ...............</td>
+                    <td> à : </td>
+                    <td id = "fin_heure_Pause">........................</td>
+
+                </tr>
+            </table>
+            </tr>
+            </table>
+            <table class="table_participants">
+                <tr >
+                    <th> Num</th>
+                    <th> Nom et Prenom</th>
+                    <th>Num CIN</th>
+                    <th>Direction / Service</th>
+                    <th>Entreprise</th>
+                    <td>
+                        <table>
+                            <tr>
+                                <th colspan="5"> EMERGEMENT</th>
+                            </tr>
+                            <tr>
+                                <th> Journée du ....</th>
+                                <th> Journée du ....</th>
+                                <th> Journée du ....</th>
+                                <th> Journée du ....</th>
+                                <th> Journée du ....</th>
+
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+            
+            
+                
+            
+        </table>
+        <div class="direction" >
+            <table >
+               <tr>
+                <td>
+                    <table class = "formatteur" >
+                        <tr>
+                            <th id ="num_Formateur"> num</th>
+                            <th> Nom et Prenom du Formateur</th>
+                            <th> CIN</th>
+                            <th>Specialite </th>
+                            <th> Direction</th>
+                        </tr>
+                        <tr>
+                            <td id ="num_formateur">....</td>
+                            <td id="nom_formateur">...</td>
+                            <td id="CIN_formateur">....</td>
+                            <td id="Specialite_formateur">...</td>
+            
+                        </tr>
+                    </table>
+
+                </td>
+                <td colspan="5" style="font-weight: bold;">
+                    Signature et cachet de l'organisme de formation / Entreprise
+
+                </td>
+               </tr> 
+            </table>
+        
+        
+            
+
+        </div>
+            
+       
+        </body>
+
+
+</html-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> User space</title>
+    <meta name="viewport" content=" width = device-width,intial-scale=1 ">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card {
+  border-radius: 10px;
+}
+
+.table thead th {
+  background-color: #0b0b0b;
+  color: white;
+}
+
+.table tbody tr:hover {
+  background-color: #ebf1f1;
+}
+body {
+    background-image: url('../../assets/images/userspace.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    height: 100vh; 
+    margin: 0;
+    padding: 0;
+}
+
+
+    </style>
+</head>
+<body >
+<div class="container mt-5 " >
+    <div class="card shadow-sm">
+      <div class="card-header bg-danger text-white text-center">
+        <h3>Cycle Information</h3>
+      </div>
+      <div class="card-body">
+        <table class="table table-bordered table-striped table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th>Cycle Theme</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Trainer</th>
+              <th>Location</th>
+              
+            </tr>
+          </thead>
+          <tbody >
+            <tr *ngFor="let c of cycle">
+                
+              <td>{{c.theme}}</td>
+              <td>{{ c.date_deb }}</td>
+              <td>{{ c.date_fin }}</td>
+              
+              <td>{{ c.form }}</td>
+              <td>{{ c.num_salle }}</td>
+              
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+  </html>
+  
