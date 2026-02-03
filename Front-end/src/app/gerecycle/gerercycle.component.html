@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <meta name="viewport" content="width = device-width, initial-scale=1">
+        <title>Gestion des cycles de formation</title>
+        
+        
+
+    </head>
+    <body>
+        <form (ngSubmit) = "onSubmit()"method="post">
+            <h1>Gestion des cycles de formation</h1>
+        <div class="form-group">
+        <label for = "nomcycle">Nom du cycle</label>
+        <select id ="nomcycle"  [(ngModel)]="theme" name="theme"required>
+            <option value="cybersecurity">cybersecurity</option>
+             <option value="datascience">data science</option>
+             <option value = "webdevelopment">développement web</option>
+                
+        </select>
+    </div> 
+        <div class="form-group">
+            <label for="date_de_depart">Date de début</label>
+            <input type="date" class="form-control" [(ngModel)]="date_deb" name="date_deb" placeholder="15/03/2002" required>
+        </div>
+        <div class="form-group">
+            <label for="date_de_depart">Date de fin</label>
+            <input type="date" class="form-control" name="date_fin" [(ngModel)]="date_fin" placeholder="15/03/2002">
+        </div>
+        <div class="form-group">
+            <label for="date_de_depart">Formatteur</label>
+            <input type="text" class="form-control" [(ngModel)]="form" name="form" >
+        </div>
+        <label for="salle">Choisissez une salle : </label>
+        <input type ="number" id="salle" [(ngModel)]="num_salle" name="num_salle"required>
+            
+       
+        
+
+        <div class="form-group">
+        <button type = "submit" id = "delete"class ="btn btn-success" (click) = "setAction('delete')">Supprimer</button>
+        <button type = "submit" id="modifier" class="btn btn-outline-success" (click) = "setAction('modifer')">modifier</button>
+        <button type = "reset"class="btn btn-danger" >Annuler</button>
+        </div>
+
+        <div class="form-group">
+        <button type = "submit" id = "Ajouter" class="btn btn-primary btn-block" (click) = "setAction('add')">Ajouter</button>
+        </div>
+        
+    </form>
+    </body>
+</html>
