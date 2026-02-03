@@ -1,0 +1,29 @@
+<!-- afficher-participants.component.html -->
+<div class="participants-container">
+    <h2>Participants</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Pass</th>
+          <th>Nom Prénom</th>
+          <th>Mail</th>
+          <th>Theme Part</th>
+          <th>Num Salle</th>
+          <th>Date Début</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let participant of participants">
+          <td>{{ participant.id }}</td>
+          <td>{{ participant.pass }}</td>
+          <td>{{ participant.nom_prenom }}</td>
+          <td>{{ participant.mail }}</td>
+          <td>{{ participant.theme_part }}</td>
+          <td>{{ participant.num_salle }}</td>
+          <td>{{ participant.date_debut }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
